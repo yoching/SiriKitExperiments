@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func buttonTapped(_ sender: Any) {
+        donateUserActivity()
+    }
+    
+    private func donateUserActivity() {
+        let userActivity = NSUserActivity(activityType: "com.yoshikuni-web.test") // same in info.plist
+        userActivity.title = "Title"
+        userActivity.userInfo = ["key": "value"]
+        
+        userActivity.isEligibleForPrediction = true // this enables shortcut
+        userActivity.suggestedInvocationPhrase = "Suggested Phrase"
+        
+        self.userActivity = userActivity // donate
+    }
 }
 
