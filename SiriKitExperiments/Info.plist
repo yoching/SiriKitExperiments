@@ -22,7 +22,7 @@
 	<true/>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>ExperimentIntent</string>
+		<string>PrintIntent</string>
 		<string>com.yoshikuni-web.test</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

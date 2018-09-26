@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     private func donateCustomIntent() {
-        let intent = ExperimentIntent()
+        let intent = PrintIntent()
         intent.message = "Test message"
         
         let interaction = INInteraction(intent: intent, response: nil)

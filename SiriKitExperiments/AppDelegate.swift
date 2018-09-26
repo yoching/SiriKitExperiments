@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if userActivity.activityType == "com.yoshikuni-web.test" /* same in info.plist */ {
             print("launch from user activity shortcut")
         } else if userActivity.activityType == "ExperimentIntent",
-            let intent = userActivity.interaction?.intent as? ExperimentIntent {
+            let intent = userActivity.interaction?.intent as? PrintIntent {
             print("launch from intents shortcut, message: \(intent.message)")
         }
         return true

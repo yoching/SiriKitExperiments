@@ -18,13 +18,13 @@
 			<key>INIntentCategory</key>
 			<string>generic</string>
 			<key>INIntentDescription</key>
-			<string>Some Experiment</string>
+			<string>Print lines</string>
 			<key>INIntentDescriptionID</key>
 			<string>v4TcC0</string>
 			<key>INIntentLastParameterTag</key>
 			<integer>1</integer>
 			<key>INIntentName</key>
-			<string>Experiment</string>
+			<string>Print</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
 				<key>message</key>
@@ -38,7 +38,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Experiment ${message}</string>
+					<string>Print ${message}</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>DVavPz</string>
 				</dict>
@@ -91,15 +91,15 @@
 			<key>INIntentRestrictions</key>
 			<integer>0</integer>
 			<key>INIntentTitle</key>
-			<string>Experiment</string>
+			<string>Print line</string>
 			<key>INIntentTitleID</key>
 			<string>zyq2Kh</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentUserConfirmationRequired</key>
-			<true/>
+			<false/>
 			<key>INIntentVerb</key>
-			<string>Do</string>
+			<string>Run</string>
 		</dict>
 	</array>
 </dict>
