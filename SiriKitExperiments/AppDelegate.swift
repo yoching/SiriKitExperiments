@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let suggestions: [INShortcut] = [
+            INShortcut(userActivity: makeTestUserActivity())
+        ]
+        
+        INVoiceShortcutCenter.shared.setShortcutSuggestions(suggestions)
+        
         return true
     }
 
@@ -25,7 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         
         if userActivity.activityType == "com.yoshikuni-web.test" /* same in info.plist */ {
-            print("launch from shortcut")
+            print("launch from user activity shortcut")
+        } else if userActivity.activityType == "ExperimentIntent",
+            let intent = userActivity.interaction?.intent as? PrintIntent {
+            print("launch from intents shortcut, message: \(intent.message)")
         }
         return true
     }
