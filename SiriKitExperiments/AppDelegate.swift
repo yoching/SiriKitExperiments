@@ -25,7 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         
         if userActivity.activityType == "com.yoshikuni-web.test" /* same in info.plist */ {
-            print("launch from shortcut")
+            print("launch from user activity shortcut")
+        } else if userActivity.activityType == "ExperimentIntent",
+            let intent = userActivity.interaction?.intent as? ExperimentIntent {
+            print("launch from intents shortcut, message: \(intent.message)")
         }
         return true
     }

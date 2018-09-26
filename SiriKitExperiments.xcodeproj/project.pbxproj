@@ -14,6 +14,7 @@
 		309EDBB9215B536300E90F56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309EDBB7215B536300E90F56 /* LaunchScreen.storyboard */; };
 		309EDBC4215B536300E90F56 /* SiriKitExperimentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBC3215B536300E90F56 /* SiriKitExperimentsTests.swift */; };
 		309EDBCF215B536300E90F56 /* SiriKitExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBCE215B536300E90F56 /* SiriKitExperimentsUITests.swift */; };
+		309EDBDD215B5E7E00E90F56 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 309EDBDC215B5E7E00E90F56 /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		309EDBCA215B536300E90F56 /* SiriKitExperimentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriKitExperimentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		309EDBCE215B536300E90F56 /* SiriKitExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriKitExperimentsUITests.swift; sourceTree = "<group>"; };
 		309EDBD0215B536300E90F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		309EDBDC215B5E7E00E90F56 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				309EDBB5215B536300E90F56 /* Assets.xcassets */,
 				309EDBB7215B536300E90F56 /* LaunchScreen.storyboard */,
 				309EDBBA215B536300E90F56 /* Info.plist */,
+				309EDBDC215B5E7E00E90F56 /* Intents.intentdefinition */,
 			);
 			path = SiriKitExperiments;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309EDBDD215B5E7E00E90F56 /* Intents.intentdefinition in Sources */,
 				309EDBB1215B536100E90F56 /* ViewController.swift in Sources */,
 				309EDBAF215B536100E90F56 /* AppDelegate.swift in Sources */,
 			);

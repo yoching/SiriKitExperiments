@@ -18,6 +18,7 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTapped(_ sender: Any) {
         donateUserActivity()
+        donateCustomIntent()
     }
     
     private func donateUserActivity() {
@@ -29,6 +30,16 @@ class ViewController: UIViewController {
         userActivity.suggestedInvocationPhrase = "Suggested Phrase"
         
         self.userActivity = userActivity // donate
+    }
+    
+    private func donateCustomIntent() {
+        let intent = ExperimentIntent()
+        intent.message = "Test message"
+        
+        let interaction = INInteraction(intent: intent, response: nil)
+        interaction.donate { error in
+            print("intent donation error \(error)")
+        }
     }
 }
 
