@@ -22,20 +22,13 @@ class ViewController: UIViewController {
     }
     
     private func donateUserActivity() {
-        let userActivity = NSUserActivity(activityType: "com.yoshikuni-web.test") // same in info.plist
-        userActivity.title = "Title"
-        userActivity.userInfo = ["key": "value"]
-        
-        userActivity.isEligibleForPrediction = true // this enables shortcut
-        userActivity.suggestedInvocationPhrase = "Suggested Phrase"
-        
-        self.userActivity = userActivity // donate
+        self.userActivity = makeTestUserActivity() // donate
     }
     
     private func donateCustomIntent() {
         let intent = PrintIntent()
         intent.message = "Test message"
-        
+        intent.suggestedInvocationPhrase = "Custom Intent"
         let interaction = INInteraction(intent: intent, response: nil)
         interaction.donate { error in
             print("intent donation error \(error)")
@@ -43,3 +36,13 @@ class ViewController: UIViewController {
     }
 }
 
+func makeTestUserActivity() -> NSUserActivity {
+    let userActivity = NSUserActivity(activityType: "com.yoshikuni-web.test") // same in info.plist
+    userActivity.title = "Title"
+    userActivity.userInfo = ["key": "value"]
+    
+    userActivity.isEligibleForPrediction = true // this enables shortcut
+    userActivity.suggestedInvocationPhrase = "Suggested Phrase"
+    
+    return userActivity
+}
